@@ -27,8 +27,8 @@ public class ProductService {
      return    repo.findById(id);
     }
     public Product saveProduct(RequestProduct p){
-        var codeDiscount = restTemplate
-                .getForObject("http://localhost:8090/api/discount/getbycode/{code}" , DiscountModel.class ,p.getCodeDiscount()  );
+       // var codeDiscount = restTemplate.getForObject("http://localhost:8090/api/discount/getbycode/{code}" , DiscountModel.class ,p.getCodeDiscount()  );
+        var codeDiscount = restTemplate.getForObject("http://DISCOUNT/api/discount/getbycode/{code}" , DiscountModel.class ,p.getCodeDiscount());
         var dis = new BigDecimal(100).subtract(codeDiscount.getDiscount());
         var newPrice = dis.multiply(p.getPrice());
         Product pro = new Product();

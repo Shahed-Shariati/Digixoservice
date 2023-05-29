@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:5432/discount
+    username: postgres
+    password: 123qweR
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  application:
+    name: DISCOUNT
+server:
+  port: 8090
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
