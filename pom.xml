@@ -9,6 +9,7 @@
         <module>product</module>
         <module>discount</module>
         <module>eureka-server</module>
+        <module>clients5</module>
 
     </modules>
     <packaging>pom</packaging>
